@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --green: #1a4001;
+  --green-dark: #112900;
+  --green-mid: #2d6a04;
+  --yellow: #e8a020;
+  --yellow-light: #f5c842;
+  --bg: #ffffff;
+  --bg-cream: #f5f5e8;
+  --bg-light: #f0f4ec;
+  --text: #1a2e0a;
+  --text-muted: #5a6a4a;
+  --white: #fff;
+  --border: #dde8d0;
+  --radius: 16px;
+  --shadow: 0 4px 24px rgba(26,64,1,0.10);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Manrope', sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section { padding: 80px 0; }
+
+/* Section label — the green "• • Partners" style */
+.section-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.section-label::before {
+  content: '';
+  display: inline-flex;
+  width: 18px;
+  height: 18px;
+  background: url("data:image/svg+xml,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='5' cy='5' r='3' fill='%231a4001'/%3E%3Ccircle cx='15' cy='5' r='3' fill='%23e8a020' opacity='.6'/%3E%3Ccircle cx='5' cy='15' r='3' fill='%23e8a020' opacity='.6'/%3E%3Ccircle cx='15' cy='15' r='3' fill='%231a4001'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+
+.section-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #0f1e05;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.section-sub {
+  color: var(--text-muted);
+  max-width: 620px;
+  line-height: 1.75;
+  font-size: 15px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.22s;
+  border: none;
+  font-family: 'Manrope', sans-serif;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: white;
+}
+.btn-primary:hover { background: var(--green-dark); transform: translateY(-2px); }
+
+.btn-outline {
+  background: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
+}
+.btn-outline:hover { background: var(--green); color: white; }
+
+.btn-accent {
+  background: var(--yellow);
+  color: white;
+}
+.btn-accent:hover { background: #d4901c; }
+
+/* Card */
+.card {
+  background: white;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(26,64,1,0.15);
+}
+
+/* Arrow icon for buttons */
+.arr::after { content: ' ↗'; font-size: 13px; }
